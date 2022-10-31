@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'TabacariaCli';
+ 
+  produtos: Object[] = [];
+
+  constructor(http: HttpClient){
+
+    http
+    .get<any[]>('http://localhost:8080/TabacariaApp/produto')
+    .subscribe(produtos => this.produtos = produtos );
+
+
+  }
 }

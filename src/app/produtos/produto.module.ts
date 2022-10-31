@@ -1,8 +1,9 @@
-import { NgClass } from "@angular/common";
 import { NgModule } from "@angular/core";
+import { ProdutoComponent } from "./produto.component";
 
 @NgModule({
-    declarations: []
+    declarations: [ProdutoComponent],
+    exports: [ProdutoComponent]
 })
 
 export class ProdutoModule{}

@@ -1,6 +1,12 @@
 <navbar-component></navbar-component>
-<tb-produto *ngFor="let produto of produtos" 
-[descricao] = "produto.description" >
-</tb-produto>
 
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            
 
+            <tb-produto></tb-produto>
+
+        </div>
+    </div>
+</div>

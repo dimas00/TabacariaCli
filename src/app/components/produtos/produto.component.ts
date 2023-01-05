@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
-import { ProdutoService } from "../core/service/produto.service";
+import { ProdutoService } from "../../core/service/produto.service";
 
 @Component({
     selector: 'tb-produto',
@@ -20,7 +20,7 @@ export class ProdutoComponent implements OnInit {
     getProdutos() {
         this.produtoService.getProdutos().subscribe(produtos => {
             console.log(produtos)
-            this.produtos = produtos;
+            this.produtos = produtos; 
         });
     }
 
